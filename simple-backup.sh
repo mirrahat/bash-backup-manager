@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# 🎒 Your Friendly Backup Buddy!
+# Your Friendly Backup Buddy!
 # Hi there! I'm here to help you backup your precious files safely.
 # Just run me and I'll take care of everything!
 #
-# Made with ❤️ by BASHCAVE
+# Author: Mir Hasibul Hasan Rahat
 # Version 2.0.0 - Now with extra friendliness!
 # License: MIT (free to use and share!)
 
-# 📂 First, let me find where I live so I can load my helper friends
+# First, let me find where I live so I can load my helper friends
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# 👥 Time to wake up my helper modules!
+# Time to wake up my helper modules!
 source "${SCRIPT_DIR}/config.sh"    # My settings manager
 source "${SCRIPT_DIR}/utils.sh"     # My toolkit of handy functions  
 source "${SCRIPT_DIR}/backup.sh"    # My backup specialist
 
-# 📋 Where do I keep my default settings?
+# Where do I keep my default settings?
 CONFIG_FILE="${SCRIPT_DIR}/config.conf"
 
 # Parse command line arguments

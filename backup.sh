@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# 💾 My Backup Brain!
+# My Backup Brain!
+# Author: Mir Hasibul Hasan Rahat
 # This is where the real backup magic happens.
 # All my clever backup tricks live here!
 
-# 🏷️ My name maker - creates unique names for each backup
+# My name maker - creates unique names for each backup
 generate_backup_filename() {
     local current_datetime=$(date "+$DATE_FORMAT")
     echo "backup_${current_datetime}.tar.gz"

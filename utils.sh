@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# 🛠️ My Trusty Toolkit!
+# My Trusty Toolkit!
+# Author: Mir Hasibul Hasan Rahat
 # This is where I keep all my handy helper functions.
 # Think of it as my Swiss Army knife for backup tasks!
 
-# 📝 My personal diary writer - keeps track of what I'm doing
+# My personal diary writer - keeps track of what I'm doing
 log_message() {
     local level="$1"
     local message="$2"
@@ -19,9 +20,10 @@ log_message() {
     fi
 }
 
-# 🆘 My helpful guide - shows people how to use me
+# My helpful guide - shows people how to use me
 show_help() {
-    echo "🎒 Your Friendly Backup Buddy v2.0.0"
+    echo "Your Friendly Backup Buddy v2.0.0"
+    echo "Author: Mir Hasibul Hasan Rahat"
     echo "Hi! I'm here to help you backup your files safely and easily."
     echo ""
     echo "How to use me:"
@@ -40,7 +42,7 @@ show_help() {
     echo "  --no-cleanup        Skip cleaning up old backups this time"
     echo "  --no-log           Don't write to my diary this time"
     echo ""
-    echo "Need more help? Check the README.md file - it's full of examples! 😊"
+    echo "Need more help? Check the README.md file - it's full of examples!"
 }
 
 # Function to validate directories
