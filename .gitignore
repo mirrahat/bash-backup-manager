@@ -19,6 +19,15 @@ Thumbs.db
 *.log
 *.tmp
 
+# Enhanced Backup Script specific
+backup_*.tar.gz
+*.tar.gz
+backup.log
+test_backups/
+test_source/
+test_restore/
+.backup-script/
+
 # Compiled Source #
 ###################
 *.com
