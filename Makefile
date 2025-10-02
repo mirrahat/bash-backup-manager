@@ -1,73 +1,72 @@
-# Makefile for Enhanced Backup Script
+# 🛠️ Easy Setup Commands for Your Backup Buddy!
 
 .PHONY: install install-user install-system uninstall test clean help
 
-# Default target
+# Default target - show help
 all: help
 
-# Install for current user
+# Install just for you
 install-user:
-	@echo "Installing for current user..."
+	@echo "🏠 Setting up your backup buddy just for you..."
 	@chmod +x install.sh
 	@./install.sh --user
 
-# Install system-wide (requires sudo)
+# Install for everyone on this computer (needs admin powers)
 install-system:
-	@echo "Installing system-wide..."
+	@echo "🌍 Setting up your backup buddy for everyone..."
 	@chmod +x install.sh
 	@sudo ./install.sh --system
 
-# Default install (user)
+# Default install (just for you)
 install: install-user
 
-# Uninstall
+# Remove everything
 uninstall:
-	@echo "Uninstalling..."
+	@echo "👋 Saying goodbye to your backup buddy..."
 	@chmod +x install.sh
 	@./install.sh --uninstall
 
-# Create desktop shortcut
+# Add a desktop shortcut (Linux only)
 desktop:
-	@echo "Creating desktop shortcut..."
+	@echo "🖥️ Creating a desktop shortcut..."
 	@chmod +x install.sh
 	@./install.sh --desktop
 
-# Test the script
+# Test if everything works
 test:
-	@echo "Running basic tests..."
+	@echo "🧪 Testing your backup buddy..."
 	@chmod +x simple-backup.sh
 	@./simple-backup.sh --help
-	@echo "Test completed successfully!"
+	@echo "🎉 Everything works perfectly!"
 
-# Make all scripts executable
+# Make files runnable
 chmod:
-	@echo "Setting executable permissions..."
+	@echo "🔑 Making scripts executable..."
 	@chmod +x simple-backup.sh
 	@chmod +x install.sh
 
-# Clean up temporary files
+# Clean up mess
 clean:
-	@echo "Cleaning up..."
+	@echo "🧹 Cleaning up temporary files..."
 	@rm -f *.log
 	@rm -f backup_*.tar.gz
 
-# Show help
+# Show this help
 help:
-	@echo "Enhanced Backup Script - Makefile"
-	@echo "=================================="
+	@echo "🎒 Your Backup Buddy - Quick Setup Guide"
+	@echo "========================================"
 	@echo ""
-	@echo "Available targets:"
-	@echo "  install        Install for current user (default)"
-	@echo "  install-user   Install for current user only"
-	@echo "  install-system Install system-wide (requires sudo)"
-	@echo "  uninstall      Remove installation"
-	@echo "  desktop        Create desktop shortcut"
-	@echo "  test           Test the script"
-	@echo "  chmod          Make scripts executable"
-	@echo "  clean          Clean temporary files"
-	@echo "  help           Show this help message"
+	@echo "What can I help you with?"
+	@echo "  install        📥 Set up for just you (recommended!)"
+	@echo "  install-system 🌍 Set up for everyone (needs admin)"
+	@echo "  uninstall      👋 Remove everything"
+	@echo "  desktop        🖥️ Add desktop shortcut (Linux)"
+	@echo "  test           🧪 Check if everything works"
+	@echo "  clean          🧹 Clean up temporary files"
+	@echo "  help           ❓ Show this friendly help"
 	@echo ""
-	@echo "Examples:"
-	@echo "  make install         # Install for current user"
-	@echo "  make install-system  # Install system-wide"
-	@echo "  make test           # Test the installation"
+	@echo "Try these:"
+	@echo "  make install         # Perfect for getting started!"
+	@echo "  make test           # Make sure everything works"
+	@echo ""
+	@echo "Need more help? Check README.md! 😊"

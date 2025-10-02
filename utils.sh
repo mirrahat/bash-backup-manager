@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# utils.sh - Utility functions for the backup script
-# Contains logging, cleanup, validation, and helper functions
+# 🛠️ My Trusty Toolkit!
+# This is where I keep all my handy helper functions.
+# Think of it as my Swiss Army knife for backup tasks!
 
-# Function to log messages
+# 📝 My personal diary writer - keeps track of what I'm doing
 log_message() {
     local level="$1"
     local message="$2"
@@ -18,23 +19,28 @@ log_message() {
     fi
 }
 
-# Function to show help
+# 🆘 My helpful guide - shows people how to use me
 show_help() {
-    echo "Enhanced Backup Script v2.0.0"
-    echo "Usage: $0 [OPTIONS] [SOURCE_DIR] [BACKUP_DIR]"
+    echo "🎒 Your Friendly Backup Buddy v2.0.0"
+    echo "Hi! I'm here to help you backup your files safely and easily."
     echo ""
-    echo "Options:"
-    echo "  -h, --help          Show this help message"
-    echo "  -v, --verbose       Enable verbose output"
-    echo "  -q, --quiet         Quiet mode (minimal output)"
-    echo "  -c, --config FILE   Use custom config file"
-    echo "  --no-cleanup        Disable automatic cleanup"
-    echo "  --no-log           Disable logging"
+    echo "How to use me:"
+    echo "  $0                           # Just run me and I'll ask what you need!"
+    echo "  $0 /your/files /backup/spot  # Tell me exactly what and where"
+    echo "  $0 /your/files              # I'll use your default backup location"
     echo ""
-    echo "Examples:"
-    echo "  $0                           # Interactive mode"
-    echo "  $0 /home/user/docs /backups  # Backup docs to /backups"
-    echo "  $0 -v /home/user/docs        # Verbose backup to default location"
+    echo "Special powers I have:"
+    echo "  -h, --help          Show this friendly help message"
+    echo "  -v, --verbose       Make me extra chatty about what I'm doing"
+    echo "  -q, --quiet         Make me work silently"
+    echo "  -l, --list          Show you what backups you already have"
+    echo "  -r, --restore       Bring back your files from a backup"
+    echo "  -c, --config FILE   Use your own special settings file"
+    echo "  --create-config     Make a new settings file template"
+    echo "  --no-cleanup        Skip cleaning up old backups this time"
+    echo "  --no-log           Don't write to my diary this time"
+    echo ""
+    echo "Need more help? Check the README.md file - it's full of examples! 😊"
 }
 
 # Function to validate directories

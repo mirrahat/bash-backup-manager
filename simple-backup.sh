@@ -1,21 +1,22 @@
 #!/bin/bash
 
-# Enhanced Backup Script - Main Entry Point
-# Creates a compressed backup of a specified directory with advanced features.
+# 🎒 Your Friendly Backup Buddy!
+# Hi there! I'm here to help you backup your precious files safely.
+# Just run me and I'll take care of everything!
 #
-# @author BASHCAVE
-# @version 2.0.0
-# @license MIT
+# Made with ❤️ by BASHCAVE
+# Version 2.0.0 - Now with extra friendliness!
+# License: MIT (free to use and share!)
 
-# Script directory for finding modules and config
+# 📂 First, let me find where I live so I can load my helper friends
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Load modules
-source "${SCRIPT_DIR}/config.sh"
-source "${SCRIPT_DIR}/utils.sh"
-source "${SCRIPT_DIR}/backup.sh"
+# 👥 Time to wake up my helper modules!
+source "${SCRIPT_DIR}/config.sh"    # My settings manager
+source "${SCRIPT_DIR}/utils.sh"     # My toolkit of handy functions  
+source "${SCRIPT_DIR}/backup.sh"    # My backup specialist
 
-# Initialize configuration
+# 📋 Where do I keep my default settings?
 CONFIG_FILE="${SCRIPT_DIR}/config.conf"
 
 # Parse command line arguments

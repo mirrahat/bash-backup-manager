@@ -16,21 +16,21 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Print colored output
+# Pretty colored messages to make things friendly!
 print_status() {
-    echo -e "${GREEN}[INFO]${NC} $1"
+    echo -e "${GREEN}😊 Great news!${NC} $1"
 }
 
 print_warning() {
-    echo -e "${YELLOW}[WARN]${NC} $1"
+    echo -e "${YELLOW}⚠️  Heads up:${NC} $1"
 }
 
 print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
+    echo -e "${RED}😱 Oops!${NC} $1"
 }
 
 print_header() {
-    echo -e "${BLUE}$1${NC}"
+    echo -e "${BLUE}🚀 $1${NC}"
 }
 
 # Function to check if running as root
@@ -42,13 +42,13 @@ check_root() {
     fi
 }
 
-# Function to check dependencies
+# Let me check if you have everything I need!
 check_dependencies() {
-    print_status "Checking dependencies..."
+    print_status "Let me check if you have all the tools I need..."
     
     local missing_deps=()
     
-    # Check for required commands
+    # I need these friends to work properly
     for cmd in tar gzip find; do
         if ! command -v "$cmd" >/dev/null 2>&1; then
             missing_deps+=("$cmd")
@@ -56,12 +56,14 @@ check_dependencies() {
     done
     
     if [[ ${#missing_deps[@]} -gt 0 ]]; then
-        print_error "Missing required dependencies: ${missing_deps[*]}"
-        echo "Please install the missing commands and try again."
+        print_error "I'm missing some friends I need to work: ${missing_deps[*]}"
+        echo "Could you please install these tools and try again? They usually come with your system!"
+        echo "On Ubuntu/Debian: sudo apt install tar gzip findutils"
+        echo "On MacOS: These should already be installed!"
         exit 1
     fi
     
-    print_status "All dependencies found."
+    print_status "Perfect! I have everything I need to work!"
 }
 
 # Function to install system-wide

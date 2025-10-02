@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# backup.sh - Core backup functionality
-# Contains the main backup logic and related functions
+# 💾 My Backup Brain!
+# This is where the real backup magic happens.
+# All my clever backup tricks live here!
 
-# Function to generate backup filename
+# 🏷️ My name maker - creates unique names for each backup
 generate_backup_filename() {
     local current_datetime=$(date "+$DATE_FORMAT")
     echo "backup_${current_datetime}.tar.gz"
