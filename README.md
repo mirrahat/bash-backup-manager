@@ -302,5 +302,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Developed by:** Mir Hasibul Hasan Rahat  
-**Project Status:** Active Development  
-**Last Updated:** 2024
+**Project Status:** Active Development
